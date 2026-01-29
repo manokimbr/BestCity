@@ -6,6 +6,7 @@ const Layout = Loadable(lazy(() => import("../components/layout/Layout")));
 const Dashboard = Loadable(lazy(() => import("../views/dashboard/Dashboard")));
 const Sell = Loadable(lazy(() => import("../views/sell/Sell")));
 const Login = Loadable(lazy(() => import("../views/login/Login")));
+const NotesDemo = Loadable(lazy(() => import("../views/NotesDemo")));
 const Notfound = Loadable(
   lazy(() => import("../components/errorboundary/404"))
 );
@@ -18,6 +19,7 @@ const Router = [
       { path: "/", element: <Navigate to="/dashboard" /> },
       { path: "/dashboard", exact: true, element: <Dashboard /> },
       { path: "/sell", exact: true, element: <Sell /> },
+      { path: "/notes", exact: true, element: <NotesDemo /> },
       { path: "/login", exact: true, element: <Login /> },
       { path: "/auth/404", exact: true, element: <Notfound /> },
       { path: "*", element: <Navigate to="/auth/404" /> }
